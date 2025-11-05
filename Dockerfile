@@ -9,7 +9,7 @@ RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /
 
 COPY . /app/
 WORKDIR /app/
-apt-get update && \
+RUN apt-get update && \
     apt-get install -y --no-install-recommends git ffmpeg build-essential libssl-dev && \
     pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir --upgrade -r requirements.txt && \
