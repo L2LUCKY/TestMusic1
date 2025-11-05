@@ -20,7 +20,7 @@ from urllib.parse import urlparse
 YOUR_API_URL = None
 
 def cookie_txt_file():
-    cookie_dir = "PritiMusic/cookies"
+    cookie_dir = "ANNIEMUSIC/cookies"
     if not os.path.exists(cookie_dir):
         return None
     cookies_files = [f for f in os.listdir(cookie_dir) if f.endswith(".txt")]
